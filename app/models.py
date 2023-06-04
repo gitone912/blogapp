@@ -22,7 +22,7 @@ class BlogPost(models.Model):
     slug=models.CharField(max_length=130)
     content=models.TextField()
     image = models.ImageField(upload_to="profile_pics", blank=True, null=True)
-    dateTime=models.DateTimeField(auto_now=False, auto_now_add=False,blank=True, null=True)
+    dateTime=models.DateTimeField(auto_now=True,blank=True, null=True)
     
     def __str__(self):  # sourcery skip: use-fstring-for-concatenation
         return str(self.author) +  " Blog Title: " + self.title
